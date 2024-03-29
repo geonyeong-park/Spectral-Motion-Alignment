@@ -1,0 +1,22 @@
+train_steps: 400
+lr: 0.0001
+num_inv_steps: 75
+threshold: 0.2
+trainable_modules:
+- .to_q
+- .to_k
+- .to_v
+seed: 12345
+train_prompt: A butterfly is opening wings.
+inference_prompts:
+- '0: A butterfly is opening wings in snow.'
+sr2_strength: 0.8
+sr2_steps: 50
+ld_global: 1.0
+ld_local: 1.0
+num_levels: 3
+ld_levels:
+- 1.0
+- 1.0
+- 1.0
+- 1.0

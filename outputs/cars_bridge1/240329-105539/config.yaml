@@ -1,0 +1,24 @@
+train_steps: 500
+lr: 0.0001
+num_inv_steps: 75
+threshold: 0.25
+trainable_modules:
+- .to_q
+- .to_k
+- .to_v
+seed: 12345
+train_prompt: cars are moving.
+inference_prompts:
+- '0: turtles are moving'
+- '1: tanks are moving in a field'
+- '2: tanks are running in a desert'
+- '3: cars are running on the ice'
+sr2_strength: 0.8
+sr2_steps: 50
+ld_global: 0.4
+ld_local: 0.2
+num_levels: 2
+ld_levels:
+- 1.0
+- 1.0
+- 1.0
