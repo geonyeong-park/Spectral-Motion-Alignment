@@ -1,5 +1,6 @@
 # Spectral-Motion-Alignment
-This repository is the official implementation of [SMA: Spectral Motion Alignment for Video Motion Transfer using Diffusion Models](https://arxiv.org/abs/2403.15249).<br>
+This repository is the official implementation of [SMA](https://arxiv.org/abs/2403.15249).<br>
+**[SMA: Spectral Motion Alignment for Video Motion Transfer using Diffusion Models](https://arxiv.org/abs/2403.15249).** <br>
 [Geon Yeong Park*](https://geonyeong-park.github.io/),
 [Hyeonho Jeong*](https://hyeonho99.github.io/),
 [Sang Wan Lee](https://aibrain.kaist.ac.kr/),
@@ -49,7 +50,7 @@ accelerate launch train_inference.py --config configs/man_skate.yml
 ```
 
 ## Additional Data
-Following samples are released by [VMC](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
+We benefit from video dataset released by [VMC](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
 * PNG files: [Google Drive Folder](https://drive.google.com/drive/u/2/folders/1L4dIqeK52lGBuxIKAEUzZgOEP95dz7AC)
 * GIF files: [Google Drive Folder](https://drive.google.com/drive/u/2/folders/1GUDnosOkYQ50-1bHHIBitRMeamkd2qao)
 
@@ -99,24 +100,20 @@ Following samples are released by [VMC](https://github.com/HyeonHo99/Video-Motio
     <td><img src="https://geonyeong-park.github.io/spectral-motion-alignment/static/gifs/motiondirector/seagull_skyline/input.gif"></td>
     <td><img src="https://geonyeong-park.github.io/spectral-motion-alignment/static/gifs/motiondirector/seagull_skyline/with/eagle.gif"></td>
   </tr>
-  <tr>
-    <td><img src="https://geonyeong-park.github.io/spectral-motion-alignment/static/gifs/motiondirector/sharks_moving/input.gif"></td>
-    <td><img src="https://geonyeong-park.github.io/spectral-motion-alignment/static/gifs/motiondirector/sharks_moving/with/airplane_sky.gif"></td>
-  </tr>
 </table>
 
 ## Hyperparameters
 Most configurations follows [VMC](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
-- `ld_global`: Weight for global motion alignment ($\lambda_{g}$ in the paper). Recommend `0.4` for a first trial.
+- `ld_global`: Weight for global motion alignment ($\lambda_{g}$ in the paper). <i>Default `0.4`</i>
 
-- `ld_local`: Weight for local motion refinement ($\lambda_{l}$ in the paper). Recommend `0.2` for a first trial.
+- `ld_local`: Weight for local motion refinement ($\lambda_{l}$ in the paper). <i>Default `0.2`</i>
 
-- `num_levels`: Number of levels in discrete wavelet transform. Recommend `2` for 8-frames, `3` for 16-frames.
+- `num_levels`: Number of levels in discrete wavelet transform. <i>Default `2` for 8-frames input video, `3` for 16-frames input video</i>
 
-- `ld_levels`: Weight for the alignment of each wavelet coefficients. Recommend default setting: [1]*(num_levels+1).
+- `ld_levels`: Weight for the alignment of each wavelet coefficients. <i>Default: `[1]*(num_levels+1)`</i>
 
 ## Citation
-If you find our work interesting, please cite our paper.
+If you make use of our work, please cite our paper.
 ```bibtex
 @article{park2024spectral,
   title={Spectral Motion Alignment for Video Motion Transfer using Diffusion Models},
@@ -127,11 +124,6 @@ If you find our work interesting, please cite our paper.
 ```
 
 ## Shoutouts
-- SMA directly employs an open-source project on cascaded Video Diffusion Models, [Show-1](https://github.com/showlab/Show-1),
-  along with [DeepFloyd IF](https://github.com/deep-floyd/IF), as similarly done by [VMC](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
-- This code builds upon [Diffusers](https://github.com/huggingface/diffusers) and we referenced the code logic of [Tune-A-Video](https://github.com/showlab/Tune-A-Video).
-- We demonstrated the compatibility of SMA with our previous work (VMC) and other three great projects: [MotionDirector](https://arxiv.org/abs/2310.08465), [Tune-A-Video](https://arxiv.org/abs/2212.11565), [Control-A-Video](https://arxiv.org/abs/2305.13840).
-
-<br><i>Thanks all for open-sourcing!</i>
-
-
+- SMA is validated on various open-source video/image diffusion models: [Show-1](https://huggingface.co/showlab/show-1-base), [Zeroscope-V2](https://huggingface.co/cerspense/zeroscope_v2_576w), [Stable Diffusion](https://huggingface.co/runwayml/stable-diffusion-v1-5), and [ControlNet](https://huggingface.co/lllyasviel/control_v11f1p_sd15_depth).
+- SMA demonstrated its compatibility with four leading video-to-video frameworks: [VMC](https://arxiv.org/abs/2312.00845), [MotionDirector](https://arxiv.org/abs/2310.08465), [Tune-A-Video](https://arxiv.org/abs/2212.11565), [ControlVideo](https://arxiv.org/abs/2305.17098).
+  
