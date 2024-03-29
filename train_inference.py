@@ -600,6 +600,8 @@ def inference(pipe_base, pipe_interp_1, pipe_sr_1_image, pipe_sr_1_cond, pipe_sr
     # - - - - - - - - - - sr1 - - - - - - - - - - #
     bsz, channel, num_frames, height, width = video_frames.shape
     window_size, stride = 8, 7
+    if num_frames == 61:
+        window_size, stride = 7,6
     new_video_frames = torch.zeros(
         (bsz, channel, num_frames, height * 4, width * 4),
         dtype=video_frames.dtype,
