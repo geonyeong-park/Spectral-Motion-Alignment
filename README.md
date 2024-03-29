@@ -1,8 +1,8 @@
-# Spectral-Motion-Alignment 
+# Spectral-Motion-Alignment
 This repository is the official implementation of [SMA: Spectral Motion Alignment for Video Motion Transfer using Diffusion Models](https://arxiv.org/abs/2403.15249).<br>
 [Geon Yeong Park*](https://geonyeong-park.github.io/),
 [Hyeonho Jeong*](https://hyeonho99.github.io/),
-[Sang Wan Lee](https://aibrain.kaist.ac.kr/)
+[Sang Wan Lee](https://aibrain.kaist.ac.kr/),
 [Jong Chul Ye](https://bispl.weebly.com/)
 
 [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://geonyeong-park.github.io/spectral-motion-alignment/)
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 (2) Install wavelet libraries
 
-- [pytorch_wavelets](https://github.com/fbcotter/pytorch_wavelets) 
+- [pytorch_wavelets](https://github.com/fbcotter/pytorch_wavelets)
 ```shell
 git clone https://github.com/fbcotter/pytorch_wavelets
 cd pytorch_wavelets
