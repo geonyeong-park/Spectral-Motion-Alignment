@@ -20,6 +20,7 @@ This repository is the official implementation of [SMA: Spectral Motion Alignmen
 ## Setup
 ### Requirements
 For the preliminary proof of concepts, this repository is build upon [VMC (w/ Show-1 backbone)](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
+
 (1) Install VMC requirements
 
 ```shell
@@ -104,7 +105,7 @@ Following samples are released by [VMC](https://github.com/HyeonHo99/Video-Motio
   </tr>
 </table>
 
-### Hyperparameters
+## Hyperparameters
 Most configurations follows [VMC](https://github.com/HyeonHo99/Video-Motion-Customization/tree/main).
 - `ld_global`: Weight for global motion alignment ($\lambda_{g}$ in the paper). Recommend `0.4` for a first trial.
 
