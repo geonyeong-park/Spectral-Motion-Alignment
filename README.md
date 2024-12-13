@@ -1,6 +1,6 @@
-# Spectral-Motion-Alignment
+# Spectral-Motion-Alignment (AAAI 2025)
 This repository is the official implementation of [SMA](https://arxiv.org/abs/2403.15249).<br>
-**[SMA: Spectral Motion Alignment for Video Motion Transfer using Diffusion Models](https://arxiv.org/abs/2403.15249).** <br>
+**[AAAI 2025] [SMA: Spectral Motion Alignment for Video Motion Transfer using Diffusion Models](https://arxiv.org/abs/2403.15249).** <br>
 [Geon Yeong Park*](https://geonyeong-park.github.io/),
 [Hyeonho Jeong*](https://hyeonho99.github.io/),
 [Sang Wan Lee](https://aibrain.kaist.ac.kr/),
